@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alina's | Fashion Gallery</title>
+    <style>
+        .buttons-main {
+            max-width: 1000px;
+            margin-right: auto;
+            margin-left: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 70vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            text-transform: uppercase;
+        }
+
+        .btn {
+            padding: 15px;
+            text-transform: uppercase;
+            margin-left: 15px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .btn:active {
+            transform: translateY(2px);
+            background-color: #ffebe3;
+            transition: all 0.1s ease-in-out;
+        }
+
+        .btn-main {
+            background-color: #ffa07a;
+        }
+
+        .btn-sec {
+            background-color: lightsalmon;
+        }
+    </style>
+</head>
+<body>
+    <section class="section-header">
+        <h1 class="heading">
+            <span class="heading-primary">Alina's | Fashion Gallery</span>
+        </h1>
+    </section>
+    
+    <div class="clearfix"></div>
+    <div class="container">
+        <div class="table">
+            <div class="table-header">
+                <div class="header__item"><a id="name" class="filter__link" href="#">sl no.</a></div>
+                <div class="header__item"><a id="name" class="filter__link" href="#">item name</a></div>
+                <div class="header__item"><a id="name" class="filter__link" href="#">size</a></div>
+                <div class="header__item"><a id="wins" class="filter__link filter__link--number" href="#">code</a></div>
+                <div class="header__item"><a id="draws" class="filter__link filter__link--number" href="#">price</a></div>
+                <div class="header__item"><a id="losses" class="filter__link filter__link--number" href="#">quantity</a></div>
+                <div class="header__item"><a id="total" class="filter__link filter__link--number" href="#">Total Price</a></div>
+            </div>
+            <div class="table-content">	
+                <% for(var i=0;i<items.length; i++) { %>
+                    <div class="table-row">		
+                        <div class="table-data"><%= i+1 %></div>
+                        <div class="table-data"><%= items[i].item %></div>
+                        <div class="table-data"><%= items[i].size %></div>
+                        <div class="table-data"><%= items[i].code %></div>
+                        <div class="table-data"><%= items[i].price %></div>
+                        <div class="table-data"><%= items[i].quantity %></div>
+                        <div class="table-data"><%= items[i].total_price %></div>
+                    </div>
+                <% } %>
+            </div>	
+        </div>
+    </div>
+    <section class="buttons-main">
+        <span class="btn btn-main" ><a href="/">< home</a></span>
+        <span class="btn btn-sec"><a href="/view/stocks">view Stocks ></a></span>
+    </section>
+</body>
+</html>

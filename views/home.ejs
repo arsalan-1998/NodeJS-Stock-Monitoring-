@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <title>Alina's | Fashion Gallery</title>
+    <style>
+        .buttons-main {
+            max-width: 1000px;
+            margin-right: auto;
+            margin-left: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 70vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .btn {
+            padding: 15px;
+            text-transform: uppercase;
+            margin-left: 15px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .btn:active {
+            transform: translateY(2px);
+            background-color: #ffebe3;
+            transition: all 0.1s ease-in-out;
+        }
+
+        .btn-main {
+            background-color: #ffa07a;
+        }
+
+        .btn-sec {
+            background-color: lightsalmon;
+        }
+    </style>
+</head>
+<body>
+    <section class="section-header">
+        <h1 class="heading">
+            <span class="heading-primary">Alina's | Fashion Gallery</span>
+        </h1>
+    </section>
+
+    <section class="buttons-main">
+        <span class="btn btn-main" ><a href="/view/stocks">View Stocks</a></span>
+        <span class="btn btn-sec"><a href="/edit/stocks">Edit Stocks</a></span>
+        <span class="btn btn-sec"><a href="/insert/stockForm">Insert Stocks</a></span>
+        <span class="btn btn-sec"><a href="/delete/stock">Delete Stocks</a></span>
+    </section>
+</body>
+</html>
